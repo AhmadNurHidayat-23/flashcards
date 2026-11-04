@@ -1,0 +1,13 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    public function run(): void
+    {
+        // Start with an empty collection; create study material in the interface.
+    }
+}

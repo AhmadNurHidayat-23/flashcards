@@ -1,0 +1,76 @@
+.study { max-width: 900px; margin: 0 auto 35px; }
+.study-header { display: flex; justify-content: space-between; align-items: end; gap: 25px; }
+.study-header .eyebrow { margin-bottom: 13px; }
+.study-header h1 { font-size: 34px; line-height: 1.2; letter-spacing: -1.2px; margin-bottom: 0; overflow-wrap: anywhere; }
+.study-header > button { font-size: 12px; white-space: nowrap; margin-bottom: 5px; }
+.study-progress { margin-top: 28px; }
+.study-progress > div { display: flex; justify-content: space-between; gap: 12px; font-size: 11px; }
+.study-progress p { margin-bottom: 10px; }
+progress { appearance: none; width: 100%; height: 3px; border: none; background: var(--line); display: block; }
+progress::-webkit-progress-bar { background: var(--line); }
+progress::-webkit-progress-value { background: var(--violet); transition: width .2s; }
+progress::-moz-progress-bar { background: var(--violet); }
+.study-status { font-size: 11px; min-height: 18px; line-height: 1.7; margin: 17px 0; }
+.flashcard { display: block; width: 100%; padding: 0; border: 0; background: transparent; perspective: 1600px; text-align: left; color: #111111; }
+.flip-inner { display: grid; transform-style: preserve-3d; transition: transform .48s cubic-bezier(.2,.65,.3,1); min-height: 350px; }
+.flashcard.is-flipped .flip-inner { transform: rotateY(180deg); }
+.card-face { grid-area: 1 / 1; border: 1px solid var(--violet); border-top-width: 3px; background: var(--paper); backface-visibility: hidden; -webkit-backface-visibility: hidden; padding: 30px 40px 25px; display: flex; flex-direction: column; gap: 25px; min-width: 0; }
+.card-back { transform: rotateY(180deg); background: #f3f1f8; }
+.card-face > .eyebrow { font-size: 9px; display: block; }
+.card-content { display: block; font-size: clamp(24px, 3vw, 39px); letter-spacing: -.035em; line-height: 1.35; white-space: pre-line; overflow-wrap: anywhere; margin: auto 0; padding: 10px 0; }
+.card-back .card-content { font-size: clamp(20px, 2.2vw, 29px); letter-spacing: -.025em; line-height: 1.6; }
+.flip-hint { display: flex; justify-content: space-between; align-items: center; font-size: 11px; margin-top: auto; }
+.flip-hint > span { font-size: 20px; }
+.answer-actions { margin: 22px 0 0; display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+.answer-actions > p { font-size: 12px; margin: 0; }
+.answer-actions > div { display: flex; gap: 12px; }
+.answer-actions .button { font-size: 12px; padding: 12px 17px; min-height: 44px; }
+.study-navigation { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 25px 0; border-bottom: 1px solid #111; margin-top: 8px; }
+.study-navigation > button { font-size: 13px; }
+.study-navigation .eyebrow { font-size: 9px; }
+.study-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 22px; }
+.study-footer p { font-size: 10px; margin: 0; }
+.study-footer p span { margin: 0 10px; }
+.study-footer button { font-size: 12px; }
+.result { max-width: 900px; padding: 10px 0 30px; margin: auto; }
+.result h1 { font-size: clamp(36px, 4.3vw, 60px); letter-spacing: -.055em; line-height: 1.1; margin: 23px 0 20px; }
+.result-deck { font-size: 17px; overflow-wrap: anywhere; }
+.result-overview { border-top: 1px solid #111; border-bottom: 1px solid #111; margin-top: 35px; padding: 35px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+.mastery-number { font-size: 105px; line-height: 1; font-weight: 500; letter-spacing: -7px; }
+.mastery-number span { font-size: 42px; letter-spacing: -2px; margin-left: 5px; }
+.result-overview > div p { font-size: 12px; margin: 16px 0 0; }
+.result-stats { margin: 0; }
+.result-stats > div { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.result-stats > div:first-child { padding-top: 0; }
+.result-stats > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.result-stats dt { font-size: 13px; }
+.result-stats dd { margin: 0; font-size: 25px; }
+.result-stats dd span { font-size: 13px; }
+.result-actions { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 28px; }
+.result-note { font-size: 11px; max-width: 650px; margin-top: 23px; line-height: 1.8; }
+@media (max-width: 700px) {
+    .study-header { align-items: start; gap: 15px; }
+    .study-header h1 { font-size: 27px; letter-spacing: -.9px; }
+    .study-header > button { font-size: 10px; margin-top: 4px; }
+    .study-progress > div { font-size: 10px; }
+    .study-status { font-size: 10px; }
+    .flip-inner { min-height: 330px; }
+    .card-face { padding: 22px; gap: 20px; }
+    .card-content { font-size: 27px; }
+    .card-back .card-content { font-size: 22px; }
+    .flip-hint { font-size: 10px; gap: 10px; }
+    .answer-actions { flex-direction: column; align-items: stretch; gap: 15px; }
+    .answer-actions > div { display: grid; grid-template-columns: 1fr 1fr; }
+    .answer-actions .button { padding: 12px; gap: 10px; }
+    .study-navigation > .eyebrow { display: none; }
+    .study-navigation > button { font-size: 12px; }
+    .study-footer { flex-direction: column; align-items: start; gap: 23px; }
+    .study-footer p { font-size: 9px; }
+    .study-footer p span { margin: 0 5px; }
+    .result h1 { font-size: 39px; }
+    .result-overview { grid-template-columns: 1fr; gap: 30px; padding: 28px 0; }
+    .mastery-number { font-size: 90px; }
+    .result-stats > div { padding: 15px 0; }
+    .result-actions { flex-direction: column; }
+    .result-actions .button { width: 100%; font-size: 12px; }
+}

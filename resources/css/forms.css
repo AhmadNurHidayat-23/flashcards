@@ -1,0 +1,23 @@
+.form-page { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 100px; padding: 18px 0 65px; }
+.form-page h1 { font-size: clamp(36px, 4.2vw, 60px); letter-spacing: -.055em; line-height: 1.08; margin: 25px 0; }
+.form-page header > p:last-child { font-size: 15px; max-width: 330px; }
+.form-page > div { max-width: 500px; width: 100%; }
+.form-page .notice { margin-top: 0; }
+.stack-form { display: flex; flex-direction: column; gap: 24px; }
+.field { min-width: 0; }
+.field label { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 13px; margin-bottom: 10px; }
+.field label span { font-size: 10px; }
+input, textarea, select { border: 1px solid var(--line); background: transparent; border-radius: 0; max-width: 100%; padding: 13px 14px; width: 100%; min-width: 0; font-size: 14px; }
+textarea { resize: vertical; min-height: 95px; line-height: 1.6; }
+input::placeholder, textarea::placeholder { color: #111111; }
+input:focus, textarea:focus, select:focus { border-color: var(--violet); }
+.field-hint { font-size: 10px; margin: 8px 0 0; line-height: 1.5; }
+.form-actions { display: flex; align-items: center; gap: 25px; font-size: 13px; }
+.stack-form > .button { align-self: start; }
+@media (max-width: 1024px) { .form-page { gap: 50px; } }
+@media (max-width: 700px) {
+    .form-page { grid-template-columns: minmax(0, 1fr); gap: 25px; padding: 0 0 30px; }
+    .form-page h1 { font-size: 42px; margin: 20px 0; }
+    .form-page > div { max-width: none; }
+    input, textarea, select { font-size: 16px; }
+}
